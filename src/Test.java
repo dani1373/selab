@@ -4,6 +4,7 @@ class Test
     {
         testSum();
         testDiv();
+        testSub();
     }
 
     private static void testSum()
@@ -21,8 +22,7 @@ class Test
         {
             System.out.println("Sum: Failed, expected = " + expected + ", result = " + result);
         }
-    }
-    
+    }    
     private static void testDiv()
     {
         int a = 5;
@@ -37,6 +37,22 @@ class Test
         else
         {
             System.out.println("Div: Failed, expected = " + expected + ", result = " + result);
+        }
+    }
+    private static void testSub()
+    {
+        int a = 5;
+        int b = 6;
+        int expected = -1;
+        BasicMath bm = new BasicMath();
+        int result = bm.subtract(a, b);
+        if (result == expected)
+        {
+            System.out.println("Subtraction: OK");
+        }
+        else
+        {
+            System.out.println("Subtraction: Failed, expected = " + expected + ", result = " + result);
         }
     }
 }
