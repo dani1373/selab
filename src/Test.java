@@ -3,6 +3,7 @@ class Test
     public static void main(String[] args)
     {
         testSum();
+        testSub();
     }
 
     private static void testSum()
@@ -28,7 +29,7 @@ class Test
         int b = 6;
         int expected = -1;
         BasicMath bm = new BasicMath();
-        int result = bm.subtraction(a, b);
+        int result = bm.subtract(a, b);
         if (result == expected)
         {
             System.out.println("Subtraction: OK");
